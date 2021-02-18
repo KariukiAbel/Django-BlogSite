@@ -19,4 +19,5 @@ from . import views
 
 urlpatterns = [
     path(r'',views.article_list),
+    path(r'<slug>/', views.article_detail),
 ]
