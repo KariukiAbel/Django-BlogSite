@@ -9,3 +9,11 @@ class Article(models.Model):
     date = models.DateTimeField(auto_now_add=True)
         # add thumbnail later
         # add in author later
+
+
+#python3 manage.py makemigrations
+#python3 manage.py migrate
+
+    # To return a string from the db
+    def __str__(self):
+        return self.title
