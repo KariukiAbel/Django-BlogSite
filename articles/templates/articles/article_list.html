@@ -1,14 +1,6 @@
-{% load static %}
+{% extends 'base_layout.html' %}
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Articles</title>
-    <!-- <link rel="stylesheet" href="/static/styles.css"> -->
-    <link rel="stylesheet" href="{% static 'styles.css'%}">
-  </head>
-  <body>
+{% block content %}
     <h1>Article list</h1>
     <div class="articles">
 
@@ -19,7 +11,5 @@
       <p>{{article.date}}</p>
       </div>
       {% endfor %}
-
     </div>
-  </body>
-</html>
+{% endblock %}
