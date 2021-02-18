@@ -17,3 +17,7 @@ class Article(models.Model):
     # To return a string from the db
     def __str__(self):
         return self.title
+
+
+    def snippet(self):
+        return self.body[:50] + '...'
