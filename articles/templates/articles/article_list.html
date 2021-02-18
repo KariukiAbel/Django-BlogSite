@@ -6,5 +6,17 @@
   </head>
   <body>
     <h1>Article list</h1>
+    <div class="articles">
+      <!-- the {%%} is used for python code in a template -->
+      {% for article in articles %}
+      <div class="article">
+      <h2><a href="#">{{article.title}}</a></h2>
+      <p>{{article.body}}</p>
+      <p>{{article.date}}</p>
+      </div>
+      {% endfor %}
+
+      <!-- the {{}} is used to display data from python code in templates -->
+    </div>
   </body>
 </html>
