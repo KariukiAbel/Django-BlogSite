@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -10,6 +11,7 @@ class Article(models.Model):
         # add thumbnail later
     thumb = models.ImageField(default='default.png', blank=True)
         # add in author later
+    author = models.ForeignKey(User, default=None)
 
 
 #python3 manage.py makemigrations
