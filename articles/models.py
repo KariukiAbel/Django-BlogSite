@@ -11,7 +11,7 @@ class Article(models.Model):
         # add thumbnail later
     thumb = models.ImageField(default='default.png', blank=True)
         # add in author later
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
 
 
 #python3 manage.py makemigrations
